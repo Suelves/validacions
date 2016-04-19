@@ -6,7 +6,7 @@
 * @abstract Clase para validar formularios en PHP. Cada método sirve para un tipo de campo
 *
 * @version 3.3
-* @author Webmasters Team.
+* @author Sergi Suelves.
 * @copyright Media-Saturn, 2015. 
 */
 class ValidarFormulario {
@@ -17,10 +17,10 @@ class ValidarFormulario {
     */
 	public function fecha($fecha) {
      
-     $purchase_date = $fecha;
-     $std_ini_date  = "01/01/2015";
-    $std_end_date = "12/12/2015";
-     $ErrorPurchaseDate;
+        $purchase_date = $fecha;
+        $std_ini_date  = "01/01/2015";
+        $std_end_date = "12/12/2015";
+        $ErrorPurchaseDate;
 
     if ((preg_match("/([0-9]{2})\/([0-9]{2})\/([0-9]{4})/", $purchase_date, $matches) !== 1) || ($purchase_date == NULL) || ($purchase_date == "")){
       $error_purchase_date = "<li class='error-message'>•Introduce una fecha en el formato especificado</li>";
